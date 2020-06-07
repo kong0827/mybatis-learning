@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d63674a3-55d6-4418-89f9-8b7362892a61" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mybatis@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mybatis@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mybatis@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mybatis: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mybatis@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mybatis: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\run_soft\apache-maven-3.6.2-bin\repository" />
+        <option name="mavenHome" value="D:/run_soft/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\run_soft\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1crFrBIUFCROdSS3EV5AE0UXCwi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/kxj/mybatis/bean" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kxj.mybatis" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github_resp\mybatis\mybatis-day02\src\main\java\com\kxj\mybatis\bean" />
+      <recent name="E:\github_resp\mybatis\mybatis-day02\src\main\java\com\kxj\mybatis" />
+      <recent name="E:\github_resp\mybatis\mybatis-day02\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ExecutorTest.simpleTest">
+    <configuration name="ExecutorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kxj.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kxj.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.kxj.mybatis.ExecutorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExecutorTest2.cacheExecutorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kxj.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kxj.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.kxj.mybatis.ExecutorTest2" />
+      <option name="METHOD_NAME" value="cacheExecutorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExecutorTest2.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kxj.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kxj.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.kxj.mybatis.ExecutorTest2" />
+      <option name="METHOD_NAME" value="simpleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExecutorTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kxj.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kxj.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.kxj.mybatis.ExecutorTest" />
+      <option name="METHOD_NAME" value="simpleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcTest.injectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kxj.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kxj.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.kxj.mybatis.JdbcTest" />
+      <option name="METHOD_NAME" value="injectTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExecutorTest.simpleTest" />
+        <item itemvalue="JUnit.ExecutorTest" />
+        <item itemvalue="JUnit.ExecutorTest2.simpleTest" />
+        <item itemvalue="JUnit.ExecutorTest2.cacheExecutorTest" />
+        <item itemvalue="JUnit.JdbcTest.injectTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d63674a3-55d6-4418-89f9-8b7362892a61" name="Default Changelist" comment="" />
+      <created>1591279001212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591279001212</updated>
+      <workItem from="1591279003915" duration="6968000" />
+      <workItem from="1591289302725" duration="39000" />
+      <workItem from="1591289355752" duration="315000" />
+      <workItem from="1591345629731" duration="2750000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591279602562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591279602562" />
+    <state x="715" y="222" key="#xdebugger.evaluate" timestamp="1591288935428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="222" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1591288935428" />
+    <state width="1877" height="393" key="GridCell.Tab.0.bottom" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.0.center" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.0.left" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.0.right" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.1.bottom" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.1.center" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.1.left" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state width="1877" height="393" key="GridCell.Tab.1.right" timestamp="1591346045416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591346045416" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1591280002461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591280002461" />
+    <state x="690" y="285" key="extract.method.dialog" timestamp="1591346034767">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="285" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591346034767" />
+    <state x="567" y="220" width="786" height="600" key="find.popup" timestamp="1591346681035">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="567" y="220" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591346681035" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591287661507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591287661507" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kxj/mybatis/ExecutorTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
