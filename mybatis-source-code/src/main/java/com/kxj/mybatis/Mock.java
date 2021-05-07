@@ -1,5 +1,6 @@
 package com.kxj.mybatis;
 
+import com.kxj.mybatis.bean.Comment;
 import com.kxj.mybatis.bean.User;
 
 public class Mock {
@@ -13,5 +14,12 @@ public class Mock {
         user.setPhoneNumber("888888");
         user.setSex("男");
         return user;
+    }
+
+    public static Comment newComment() {
+        Comment comment = new Comment();
+        comment.setBody("body");
+        comment.setBlogId(1);
+        return comment;
     }
 }

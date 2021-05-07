@@ -1,12 +1,15 @@
 package com.kxj.mybatis.bean;
 
 
+import lombok.experimental.FieldNameConstants;
+
 import java.util.Date;
 
 /**
  * @author Tommy
  * Created by Tommy on 2019/6/27
  **/
+@FieldNameConstants
 public class User implements java.io.Serializable {
     private Integer id;
     private String name;
