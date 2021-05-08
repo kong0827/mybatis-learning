@@ -3,18 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+  
+    <settings>
+        <!--日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
     <!-- 和spring整合后 environments配置将废除 -->
     <environments default="development">
         <environment id="development">
             <!-- 使用jdbc事务管理 -->
-            <transactionManager type="JDBC" />
+            <transactionManager type="JDBC"/>
             <!-- 数据库连接池 -->
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8" />
-                <property name="username" value="root" />
-                <property name="password" value="root" />
+                          value="jdbc:mysql://rm-uf6me7d700657a4d4uo.mysql.rds.aliyuncs.com:3306/mybatis?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=GMT"/>
+                <property name="username" value="kongxiangjin"/>
+                <property name="password" value="Kong123456"/>
             </dataSource>
         </environment>
     </environments>
