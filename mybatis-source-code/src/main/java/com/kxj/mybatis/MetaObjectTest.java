@@ -4,6 +4,8 @@ import com.kxj.mybatis.bean.Blog;
 import com.kxj.mybatis.bean.Comment;
 import com.kxj.mybatis.bean.User;
 import org.apache.ibatis.reflection.MetaObject;
+import org.apache.ibatis.reflection.property.PropertyTokenizer;
+import org.apache.ibatis.reflection.wrapper.BeanWrapper;
 import org.apache.ibatis.session.Configuration;
 import org.junit.Test;
 
@@ -40,6 +42,12 @@ public class MetaObjectTest {
         metaObject.setValue("labels[key]", "value");
         System.out.println(metaObject.getValue("labels[key]"));
         Map<String, String> labels = blog.getLabels();
+
+
+        // BeanWrapper
+        BeanWrapper beanWrapper = new BeanWrapper(metaObject, blog);
+        Object title = beanWrapper.get(new PropertyTokenizer("title"));
+        System.out.println(title);
 
     }
 }
