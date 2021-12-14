@@ -81,7 +81,7 @@ public MethodSignature(Configuration configuration, Class<?> mapperInterface, Me
 获取参数名称，并封装成map
 
 ```java
-public ParamNameResolver(Configuration config, Method method) {
+public ParamNameResolver(Configuration com.config, Method method) {
     // 获取参数类型
     final Class<?>[] paramTypes = method.getParameterTypes();
     // 获取有@Param修饰的参数
@@ -105,7 +105,7 @@ public ParamNameResolver(Configuration config, Method method) {
         }
         if (name == null) {
             // @Param 未指定
-            if (config.isUseActualParamName()) {
+            if (com.config.isUseActualParamName()) {
                 name = getActualParamName(method, paramIndex);
             }
             if (name == null) {

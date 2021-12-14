@@ -117,7 +117,7 @@ try (SqlSession session = sqlSessionFactory.openSession()) {
   <?xml version="1.0" encoding="UTF-8" ?>
   <!DOCTYPE configuration
           PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-          "http://mybatis.org/dtd/mybatis-3-config.dtd">
+          "http://mybatis.org/dtd/mybatis-3-com.config.dtd">
   <configuration>
       <!-- 和spring整合后 environments配置将废除 -->
       <environments default="development">

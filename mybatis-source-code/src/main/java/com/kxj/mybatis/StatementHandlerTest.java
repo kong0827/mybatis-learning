@@ -20,7 +20,7 @@ public class StatementHandlerTest {
     @Before
     public void configuration() {
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-        sqlSessionFactory = sqlSessionFactoryBuilder.build(StatementHandlerTest.class.getResourceAsStream("/mybatis-config.xml"));
+        sqlSessionFactory = sqlSessionFactoryBuilder.build(StatementHandlerTest.class.getResourceAsStream("/mybatis-com.config.xml"));
         sqlSession = sqlSessionFactory.openSession();
     }
 
