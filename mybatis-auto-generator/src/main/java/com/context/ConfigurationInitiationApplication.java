@@ -9,8 +9,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Properties;
+import java.util.function.Function;
 
 /**
  * @author xiangjin.kong
@@ -20,12 +22,21 @@ import java.util.Properties;
 @Component
 public class ConfigurationInitiationApplication implements ApplicationRunner {
 
+    private static Properties properties;
+    private static String projectPath;
+    static {
+        // 读取配置文件
+        try {
+            properties = PropertiesLoaderUtils.loadAllProperties("generate.properties");
+            projectPath = System.getProperty("user.dir");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        // 读取配置文件
-        Properties properties = PropertiesLoaderUtils.loadAllProperties("generate.properties");
 
         /**
          * 构建数据源
@@ -35,41 +46,23 @@ public class ConfigurationInitiationApplication implements ApplicationRunner {
         String password = properties.getProperty("spring.datasource.password");
         DataSourceConfig.Builder dataSourceBuilder = new DataSourceConfig.Builder(url, name, password);
 
-
         /**
-         * 全局配置
+         * 构建快速生成器
          */
-        GlobalConfig.Builder globalConfigBuilder = new GlobalConfig.Builder();
-        String author = properties.getProperty("spring.global.author");
-        boolean swaggerEnable = properties.getProperty("spring.global.swagger.enable") == null ? false : Boolean.parseBoolean(properties.getProperty("spring.global.swagger.enable"));
-        boolean fileOverride = properties.getProperty("spring.global.file.override") == null ? false : Boolean.parseBoolean(properties.getProperty("spring.global.file.override"));
-        String fileLocation = properties.getProperty("spring.global.file.location");
-        String projectPath = System.getProperty("user.dir");
-        if (fileOverride) {
-            globalConfigBuilder.fileOverride();
-        }
-        if (swaggerEnable) {
-            globalConfigBuilder.enableSwagger();
-        }
-        globalConfigBuilder.author(author);
-        globalConfigBuilder.outputDir(projectPath + "/mybatis-auto-generator/src/main/java/com/" + fileLocation);
+        FastAutoGenerator fastAutoGenerator = FastAutoGenerator.create(dataSourceBuilder);
+        fastAutoGenerator.globalConfig(this::globalConfig);
+        fastAutoGenerator.packageConfig(this::packageConfig);
+        fastAutoGenerator.strategyConfig(this::strategyConfig);
+        fastAutoGenerator.templateConfig((stringStringFunction, builder) -> new FreemarkerTemplateEngine());
+        fastAutoGenerator.execute();
 
-        /**
-         * 包配置
-         */
-        PackageConfig.Builder packConfigBuilder = new PackageConfig.Builder();
-        String parent = properties.getProperty("spring.package.parent");
-        String moduleName = properties.getProperty("spring.package.moduleName");
-        String pathInfo = properties.getProperty("spring.package.pathInfo");
-        packConfigBuilder.parent(parent);
-        if (StringUtils.isNotBlank(moduleName)) {
-            packConfigBuilder.moduleName(moduleName);
-        }
-        packConfigBuilder.pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectPath + "/mybatis-auto-generator/resources/" + pathInfo)); // 设置mapperXml生成路径
+    }
 
-        /**
-         * 策略配置
-         */
+    /**
+     * 策略配置
+     * @param builder
+     */
+    private void strategyConfig(StrategyConfig.Builder builder) {
         StrategyConfig.Builder strategyConfigBuilder = new StrategyConfig.Builder();
         String includeTables = properties.getProperty("spring.table.include");
         String tablePrefix = properties.getProperty("spring.table.prefix");
@@ -77,16 +70,38 @@ public class ConfigurationInitiationApplication implements ApplicationRunner {
             strategyConfigBuilder.addInclude(StringUtils.split(includeTables, ","));
         }
         strategyConfigBuilder.addTablePrefix(tablePrefix);
+    }
 
-        /**
-         * 构建快速生成器
-         */
-        FastAutoGenerator fastAutoGenerator = FastAutoGenerator.create(dataSourceBuilder);
-        fastAutoGenerator.packageConfig(builder -> packConfigBuilder.build());
-        fastAutoGenerator.globalConfig(builder -> globalConfigBuilder.build());
-        fastAutoGenerator.strategyConfig(builder -> strategyConfigBuilder.build());
-        fastAutoGenerator.templateConfig((stringStringFunction, builder) -> new FreemarkerTemplateEngine());
-        fastAutoGenerator.execute();
+    /**
+     * 全局配置
+     */
+    private void globalConfig(GlobalConfig.Builder builder) {
+        String author = properties.getProperty("spring.global.author");
+        boolean swaggerEnable = properties.getProperty("spring.global.swagger.enable") == null ? false : Boolean.parseBoolean(properties.getProperty("spring.global.swagger.enable"));
+        boolean fileOverride = properties.getProperty("spring.global.file.override") == null ? false : Boolean.parseBoolean(properties.getProperty("spring.global.file.override"));
+
+        if (fileOverride) {
+            builder.fileOverride();
+        }
+        if (swaggerEnable) {
+            builder.enableSwagger();
+        }
+        builder.author(author);
+        builder.outputDir(projectPath + "/mybatis-auto-generator/temp");
+    }
+
+    /**
+     * 包配置
+     */
+    public void packageConfig(PackageConfig.Builder builder) {
+        String parent = properties.getProperty("spring.package.parent");
+        String moduleName = properties.getProperty("spring.package.moduleName");
+        String pathInfo = properties.getProperty("spring.package.pathInfo");
+        builder.parent(parent);
+        if (StringUtils.isNotBlank(moduleName)) {
+            builder.moduleName(moduleName);
+        }
+        builder.pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectPath + "/mybatis-auto-generator/temp/resources" + pathInfo)); // 设置mapperXml生成路径
 
     }
 }
